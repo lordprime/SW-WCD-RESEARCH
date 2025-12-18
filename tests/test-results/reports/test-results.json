@@ -188,7 +188,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 761,
+                  "duration": 625,
                   "errors": [],
                   "stdout": [
                     {
@@ -200,7 +200,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-12-17T15:06:40.674Z",
+                  "startTime": "2025-12-18T14:01:22.985Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -229,7 +229,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 961,
+                  "duration": 816,
                   "error": {
                     "message": "Error: Rate limiting should be enforced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
                     "stack": "Error: Rate limiting should be enforced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/ak/sw-wcd-research/tests/attack.spec.js:602:62",
@@ -257,7 +257,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-12-17T15:06:40.787Z",
+                  "startTime": "2025-12-18T14:01:22.996Z",
                   "annotations": [],
                   "attachments": [],
                   "errorLocation": {
@@ -299,7 +299,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1212,
+                      "duration": 1049,
                       "errors": [],
                       "stdout": [
                         {
@@ -311,7 +311,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:40.709Z",
+                      "startTime": "2025-12-18T14:01:22.957Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -340,11 +340,11 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 24907,
+                      "duration": 24888,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "\n[TEST] Starting trial trial-1765984000964-mqf0rp85b: local-default-chromium-t1-path-sculpting-misconfigured\n"
+                          "text": "\n[TEST] Starting trial trial-1766066483167-8wxmqi16r: local-default-chromium-t1-path-sculpting-misconfigured\n"
                         },
                         {
                           "text": "[TEST] Using CDN simulator: https://cdn-simulator.local\n"
@@ -356,7 +356,7 @@
                           "text": "[TEST] Registering Service Worker for t1-path-sculpting...\n"
                         },
                         {
-                          "text": "[TEST] Blob SW registration failed: SW registration failed: Failed to register a ServiceWorker: The URL protocol of the script ('blob:nodedata:bae4bc02-24fb-493c-8f10-ab415fa3e1bd') is not supported.\n"
+                          "text": "[TEST] Blob SW registration failed: SW registration failed: Failed to register a ServiceWorker: The URL protocol of the script ('blob:nodedata:6137ccbe-0f34-426e-8fa4-cbb77752de23') is not supported.\n"
                         },
                         {
                           "text": "[TEST] Trying URL-based registration: https://cdn-simulator.local/sw/t1-path-sculpting\n"
@@ -365,13 +365,13 @@
                           "text": "[TEST] URL-based Service Worker registered successfully\n"
                         },
                         {
-                          "text": "[TEST] Victim requesting: https://cdn-simulator.local/account?strategy=misconfigured&trial=trial-1765984000964-mqf0rp85b\n"
+                          "text": "[TEST] Victim requesting: https://cdn-simulator.local/account?strategy=misconfigured&trial=trial-1766066483167-8wxmqi16r\n"
                         },
                         {
                           "text": "[TEST] Waiting 3000ms for cache propagation...\n"
                         },
                         {
-                          "text": "[TEST] Attacker requesting: https://cdn-simulator.local/account/sw-wcd-cache.jpg?strategy=misconfigured&trial=trial-1765984000964-mqf0rp85b\n"
+                          "text": "[TEST] Attacker requesting: https://cdn-simulator.local/account/sw-wcd-cache.jpg?strategy=misconfigured&trial=trial-1766066483167-8wxmqi16r\n"
                         },
                         {
                           "text": "[TEST] Results - Cache: MISSING_HEADER, Hit: false, Victim Data: null, Success: false\n"
@@ -386,7 +386,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:40.715Z",
+                      "startTime": "2025-12-18T14:01:22.960Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -423,7 +423,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 506,
+                      "duration": 347,
                       "errors": [],
                       "stdout": [
                         {
@@ -438,7 +438,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:41.708Z",
+                      "startTime": "2025-12-18T14:01:23.834Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -467,7 +467,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 488,
+                      "duration": 420,
                       "errors": [],
                       "stdout": [
                         {
@@ -479,7 +479,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:43.560Z",
+                      "startTime": "2025-12-18T14:01:25.293Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -522,10 +522,10 @@
                   "projectName": "local",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 950,
+                      "duration": 850,
                       "errors": [],
                       "stdout": [
                         {
@@ -537,7 +537,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:42.221Z",
+                      "startTime": "2025-12-18T14:01:24.225Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -563,10 +563,10 @@
                   "projectName": "local",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3140,
+                      "duration": 3073,
                       "errors": [],
                       "stdout": [
                         {
@@ -584,7 +584,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:42.276Z",
+                      "startTime": "2025-12-18T14:01:24.260Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -610,10 +610,10 @@
                   "projectName": "local",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4450,
+                      "duration": 4428,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:197:32",
@@ -647,7 +647,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:43.206Z",
+                      "startTime": "2025-12-18T14:01:25.110Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -697,7 +697,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 724,
+                      "duration": 750,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:260:26",
@@ -791,7 +791,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-17T15:06:44.241Z",
+                      "startTime": "2025-12-18T14:01:25.900Z",
                       "annotations": [],
                       "attachments": [],
                       "errorLocation": {
@@ -816,8 +816,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-17T15:06:38.512Z",
-    "duration": 27453.305,
+    "startTime": "2025-12-18T14:01:21.046Z",
+    "duration": 27109.487,
     "expected": 7,
     "skipped": 0,
     "unexpected": 3,
