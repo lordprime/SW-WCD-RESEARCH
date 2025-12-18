@@ -1,0 +1,33 @@
+{
+  "name": "sw-wcd-v5-research",
+  "version": "1.0.0",
+  "description": "Service Worker-Mediated Web Cache Deception Research System v5 - Architecturally Correct",
+  "type": "module",
+  "scripts": {
+    "dev": "cd origin && npm run dev",
+    "test:local": "cd tests && npx playwright test --project=local",
+    "test:all": "cd tests && npx playwright test",
+    "analyze": "node analysis/statistical-engine.js",
+    "setup": "./scripts/setup-mkcert.sh",
+    "cleanup": "node scripts/cleanup-sw.js",
+    "db:init": "node scripts/init-db.js",
+    "infra:up": "cd infrastructure && docker-compose up -d",
+    "infra:down": "cd infrastructure && docker-compose down"
+  },
+  "keywords": [
+    "security",
+    "web-cache-deception",
+    "service-worker",
+    "cdn",
+    "research"
+  ],
+  "author": "SW-WCD Research Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  }
+}

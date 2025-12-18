@@ -1,0 +1,826 @@
+{
+  "config": {
+    "configFile": "/home/ak/sw-wcd-research/tests/playwright.config.js",
+    "rootDir": "/home/ak/sw-wcd-research/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "./test-results/reports/html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "./test-results/reports/test-results.json"
+        }
+      ],
+      [
+        "line",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "local",
+        "name": "local",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "cloudflare",
+        "name": "cloudflare",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "fastly",
+        "name": "fastly",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "cloudfront",
+        "name": "cloudfront",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/ak/sw-wcd-research/tests/test-results/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/ak/sw-wcd-research/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 4,
+    "webServer": {
+      "command": "cd ../origin && npm run dev",
+      "url": "https://localhost:3443/health",
+      "ignoreHTTPSErrors": true,
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "attack.spec.js",
+      "file": "attack.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Service Worker Auto-unregistration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "local",
+              "projectName": "local",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 761,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": " Testing SW auto-unregistration...\n"
+                    },
+                    {
+                      "text": " SW auto-unregistration test completed (Active & Running)\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-17T15:06:40.674Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "539c573e09b985f5ea84-3122db4eb1c1e5e74100",
+          "file": "attack.spec.js",
+          "line": 548,
+          "column": 6
+        },
+        {
+          "title": "Rate Limiting",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "local",
+              "projectName": "local",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 961,
+                  "error": {
+                    "message": "Error: Rate limiting should be enforced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: Rate limiting should be enforced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/ak/sw-wcd-research/tests/attack.spec.js:602:62",
+                    "location": {
+                      "file": "/home/ak/sw-wcd-research/tests/attack.spec.js",
+                      "column": 62,
+                      "line": 602
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 600 |\u001b[39m     \u001b[90m// Should see some rate limiting (429) or errors\u001b[39m\n \u001b[90m 601 |\u001b[39m     \u001b[36mconst\u001b[39m hasRateLimit \u001b[33m=\u001b[39m responses\u001b[33m.\u001b[39msome(status \u001b[33m=>\u001b[39m status \u001b[33m===\u001b[39m \u001b[35m429\u001b[39m \u001b[33m||\u001b[39m status \u001b[33m===\u001b[39m \u001b[32m'ERROR'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 602 |\u001b[39m     expect(hasRateLimit\u001b[33m,\u001b[39m \u001b[32m'Rate limiting should be enforced'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 603 |\u001b[39m     \n \u001b[90m 604 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m' Rate limiting test completed'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 605 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/ak/sw-wcd-research/tests/attack.spec.js",
+                        "column": 62,
+                        "line": 602
+                      },
+                      "message": "Error: Rate limiting should be enforced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 600 |\u001b[39m     \u001b[90m// Should see some rate limiting (429) or errors\u001b[39m\n \u001b[90m 601 |\u001b[39m     \u001b[36mconst\u001b[39m hasRateLimit \u001b[33m=\u001b[39m responses\u001b[33m.\u001b[39msome(status \u001b[33m=>\u001b[39m status \u001b[33m===\u001b[39m \u001b[35m429\u001b[39m \u001b[33m||\u001b[39m status \u001b[33m===\u001b[39m \u001b[32m'ERROR'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 602 |\u001b[39m     expect(hasRateLimit\u001b[33m,\u001b[39m \u001b[32m'Rate limiting should be enforced'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 603 |\u001b[39m     \n \u001b[90m 604 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m' Rate limiting test completed'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 605 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /home/ak/sw-wcd-research/tests/attack.spec.js:602:62\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": " Testing rate limiting...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-17T15:06:40.787Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/ak/sw-wcd-research/tests/attack.spec.js",
+                    "column": 62,
+                    "line": 602
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "539c573e09b985f5ea84-7e8a1c19ed3566dd61ca",
+          "file": "attack.spec.js",
+          "line": 580,
+          "column": 7
+        }
+      ],
+      "suites": [
+        {
+          "title": "SW-WCD Attack Matrix",
+          "file": "attack.spec.js",
+          "line": 266,
+          "column": 6,
+          "specs": [
+            {
+              "title": "CDN Simulator Health Check",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1212,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": " Testing CDN simulator connectivity...\n"
+                        },
+                        {
+                          "text": "CDN simulator is accessible via HTTP\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:40.709Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "539c573e09b985f5ea84-bf2abee465c94a60848a",
+              "file": "attack.spec.js",
+              "line": 268,
+              "column": 7
+            },
+            {
+              "title": "local-default-chromium-t1-path-sculpting-misconfigured",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 24907,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\n[TEST] Starting trial trial-1765984000964-mqf0rp85b: local-default-chromium-t1-path-sculpting-misconfigured\n"
+                        },
+                        {
+                          "text": "[TEST] Using CDN simulator: https://cdn-simulator.local\n"
+                        },
+                        {
+                          "text": "[TEST] Navigating to base URL: https://cdn-simulator.local\n"
+                        },
+                        {
+                          "text": "[TEST] Registering Service Worker for t1-path-sculpting...\n"
+                        },
+                        {
+                          "text": "[TEST] Blob SW registration failed: SW registration failed: Failed to register a ServiceWorker: The URL protocol of the script ('blob:nodedata:bae4bc02-24fb-493c-8f10-ab415fa3e1bd') is not supported.\n"
+                        },
+                        {
+                          "text": "[TEST] Trying URL-based registration: https://cdn-simulator.local/sw/t1-path-sculpting\n"
+                        },
+                        {
+                          "text": "[TEST] URL-based Service Worker registered successfully\n"
+                        },
+                        {
+                          "text": "[TEST] Victim requesting: https://cdn-simulator.local/account?strategy=misconfigured&trial=trial-1765984000964-mqf0rp85b\n"
+                        },
+                        {
+                          "text": "[TEST] Waiting 3000ms for cache propagation...\n"
+                        },
+                        {
+                          "text": "[TEST] Attacker requesting: https://cdn-simulator.local/account/sw-wcd-cache.jpg?strategy=misconfigured&trial=trial-1765984000964-mqf0rp85b\n"
+                        },
+                        {
+                          "text": "[TEST] Results - Cache: MISSING_HEADER, Hit: false, Victim Data: null, Success: false\n"
+                        },
+                        {
+                          "text": "[TEST] Trial logged to database\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "[TEST] Could not extract marker from victim response\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:40.715Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "539c573e09b985f5ea84-13fb3850ae578fc6055e",
+              "file": "attack.spec.js",
+              "line": 307,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Debug Helpers",
+          "file": "attack.spec.js",
+          "line": 608,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Check Origin Server Connectivity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 506,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": " Checking origin server connectivity...\n"
+                        },
+                        {
+                          "text": " https://localhost:3443/health is accessible\n"
+                        },
+                        {
+                          "text": " https://cdn-simulator.local/health is accessible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:41.708Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "539c573e09b985f5ea84-5c8e02e4c8dfd7f0bb13",
+              "file": "attack.spec.js",
+              "line": 609,
+              "column": 7
+            },
+            {
+              "title": "Check Service Worker Support",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 488,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": " Checking Service Worker support in chromium...\n"
+                        },
+                        {
+                          "text": "Service Worker support check: { hasServiceWorker: \u001b[33mtrue\u001b[39m, hasBlob: \u001b[33mtrue\u001b[39m, hasURL: \u001b[33mtrue\u001b[39m }\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:43.560Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "539c573e09b985f5ea84-4f3cc823d3092c9b9193",
+              "file": "attack.spec.js",
+              "line": 631,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "verify-sw.spec.js",
+      "file": "verify-sw.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Service Worker Verification Tests",
+          "file": "verify-sw.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Service Worker Basic Support",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 950,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": " Testing Service Worker basic support...\n"
+                        },
+                        {
+                          "text": "Service Worker Support: {\n  hasServiceWorker: \u001b[33mtrue\u001b[39m,\n  hasBlob: \u001b[33mtrue\u001b[39m,\n  hasURL: \u001b[33mtrue\u001b[39m,\n  location: \u001b[32m'https://cdn-simulator.local/health'\u001b[39m,\n  protocol: \u001b[32m'https:'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:42.221Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a15291607fd0f69351b0-efd4b1e794f04dd3f13a",
+              "file": "verify-sw.spec.js",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "Register Service Worker from Server URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3140,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": " Testing Service Worker registration from URL...\n"
+                        },
+                        {
+                          "text": "Service Worker Registration Result: {\n  success: \u001b[33mtrue\u001b[39m,\n  scope: \u001b[32m'https://cdn-simulator.local/'\u001b[39m,\n  state: \u001b[32m'activated'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Service Worker Control Status: { hasController: \u001b[33mtrue\u001b[39m, controllerState: \u001b[32m'activated'\u001b[39m }\n"
+                        },
+                        {
+                          "text": " Page is controlled by Service Worker\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:42.276Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a15291607fd0f69351b0-cc22a252e896c90bc725",
+              "file": "verify-sw.spec.js",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "Test Service Worker Interception",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4450,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:197:32",
+                        "location": {
+                          "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                          "column": 32,
+                          "line": 197
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 195 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 196 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 197 |\u001b[39m     expect(response\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 198 |\u001b[39m     \n \u001b[90m 199 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n \u001b[90m 200 |\u001b[39m     \u001b[36mconst\u001b[39m hasMarker \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mincludes(\u001b[32m'marker-'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                            "column": 32,
+                            "line": 197
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 195 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 196 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 197 |\u001b[39m     expect(response\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 198 |\u001b[39m     \n \u001b[90m 199 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n \u001b[90m 200 |\u001b[39m     \u001b[36mconst\u001b[39m hasMarker \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mincludes(\u001b[32m'marker-'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:197:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": " Testing Service Worker interception...\n"
+                        },
+                        {
+                          "text": "SW Registration for interception test: { success: \u001b[33mtrue\u001b[39m, state: \u001b[32m'installing'\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Testing account page request...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:43.206Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ak/sw-wcd-research/tests/test-results/output/verify-sw-Service-Worker-V-95525-Service-Worker-Interception-local/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ak/sw-wcd-research/tests/test-results/output/verify-sw-Service-Worker-V-95525-Service-Worker-Interception-local/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ak/sw-wcd-research/tests/test-results/output/verify-sw-Service-Worker-V-95525-Service-Worker-Interception-local/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                        "column": 32,
+                        "line": 197
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a15291607fd0f69351b0-4a3ea7d577274399b76e",
+              "file": "verify-sw.spec.js",
+              "line": 120,
+              "column": 8
+            },
+            {
+              "title": "Rate Limiting Test",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "local",
+                  "projectName": "local",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 724,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:260:26",
+                        "location": {
+                          "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                          "column": 26,
+                          "line": 260
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 258 |\u001b[39m     }\n \u001b[90m 259 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 260 |\u001b[39m     expect(hasRateLimit)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 261 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 262 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                            "column": 26,
+                            "line": 260
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 258 |\u001b[39m     }\n \u001b[90m 259 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 260 |\u001b[39m     expect(hasRateLimit)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 261 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 262 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /home/ak/sw-wcd-research/tests/verify-sw.spec.js:260:26\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": " Testing rate limiting...\n"
+                        },
+                        {
+                          "text": "Request 1: 200\n"
+                        },
+                        {
+                          "text": "Request 2: 200\n"
+                        },
+                        {
+                          "text": "Request 3: 200\n"
+                        },
+                        {
+                          "text": "Request 4: 200\n"
+                        },
+                        {
+                          "text": "Request 5: 200\n"
+                        },
+                        {
+                          "text": "Request 6: 200\n"
+                        },
+                        {
+                          "text": "Request 7: 200\n"
+                        },
+                        {
+                          "text": "Request 8: 200\n"
+                        },
+                        {
+                          "text": "Request 9: 200\n"
+                        },
+                        {
+                          "text": "Request 10: 200\n"
+                        },
+                        {
+                          "text": "Request 11: 200\n"
+                        },
+                        {
+                          "text": "Request 12: 200\n"
+                        },
+                        {
+                          "text": "Request 13: 200\n"
+                        },
+                        {
+                          "text": "Request 14: 200\n"
+                        },
+                        {
+                          "text": "Request 15: 200\n"
+                        },
+                        {
+                          "text": "Request 16: 200\n"
+                        },
+                        {
+                          "text": "Request 17: 200\n"
+                        },
+                        {
+                          "text": "Request 18: 200\n"
+                        },
+                        {
+                          "text": "Request 19: 200\n"
+                        },
+                        {
+                          "text": "Request 20: 200\n"
+                        },
+                        {
+                          "text": "Rate limiting results: {\n  responses: [\n    \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m,\n    \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m,\n    \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m,\n    \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m, \u001b[33m200\u001b[39m\n  ],\n  hasRateLimit: \u001b[33mfalse\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Service Worker script response: \u001b[33m200\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-17T15:06:44.241Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/ak/sw-wcd-research/tests/verify-sw.spec.js",
+                        "column": 26,
+                        "line": 260
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a15291607fd0f69351b0-c8345566e63a9a360f8f",
+              "file": "verify-sw.spec.js",
+              "line": 223,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-17T15:06:38.512Z",
+    "duration": 27453.305,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
