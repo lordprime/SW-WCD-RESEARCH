@@ -4,7 +4,7 @@
 
 1. **LEGAL COMPLIANCE**: This system must ONLY be used on domains you own or have explicit written permission to test. Never target third-party sites.
 
-2. **ETHICAL BOUNDARIES**: All experiments are designed for research purposes only. Implementation on production systems without authorization may violate laws and ethical guidelines.
+2. **ETHICAL BOUNDARIES**: All experiments are designed for research purposes only. Implementation on production systems without authorization will violate laws and ethical guidelines.
 
 3. **AUTO-SAFETY FEATURES**:
    - All Service Workers auto-unregister after 5 minutes
@@ -51,13 +51,4 @@ setTimeout(() => {
    - Verify database contains only test data
    - Document any anomalies for peer review
 
-##  Legal Compliance
-
-This system complies with:
-- Computer Fraud and Abuse Act (CFAA) guidelines
-- GDPR Article 6 (lawful basis for processing)
-- Academic research ethics standards
-- Responsible vulnerability disclosure principles
-
-**NEVER USE THIS SYSTEM FOR MALICIOUS PURPOSES.**
 ```

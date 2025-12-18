@@ -1,93 +1,290 @@
-# SW-WCD-CDN_research
+ 
+### Service Worker–Mediated Web Cache Deception  
+
+This repository contains a **controlled research prototype** used to study how **Service Workers (SWs)** can influence **Web Cache Deception (WCD)** behaviors in modern **CDN-backed web architectures**.
 
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## 📂 Directory Structure and Purpose
 
 ```
-cd existing_repo
-git remote add origin https://projects.cispa.saarland/c01abra/sw-wcd-cdn_research.git
-git branch -M main
-git push -uf origin main
+SW-WCD-RESEARCH/
+│
+├── analysis/               # Statistical & experimental analysis
+├── db/                     # Experiment data storage
+├── infrastructure/         # CDN & deployment simulation
+├── monitoring/             # Instrumentation & detection
+├── origin/                 # Vulnerable origin server
+├── sw/                     # Service Worker attack payloads
+├── scripts/                # Setup & cleanup utilities
+├── tests/                  # Automated experiment execution
+├── logs/                   # Runtime logs
+├── test-results/           # Structured test outputs
+│
+├── .env                    # Environment configuration
+├── package.json            # Root dependencies
+├── package-lock.json       # Dependency locking
+└── safety.md               # Safety & ethical guidelines
 ```
 
-## Integrate with your tools
+---
 
-- [ ] [Set up project integrations](https://projects.cispa.saarland/c01abra/sw-wcd-cdn_research/-/settings/integrations)
+###  `analysis/` — Statistical & Experimental Analysis
 
-## Collaborate with your team
+Scripts used **after experiments** to analyze results.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+- **`power-analysis.R`**:  
+  Performs power analysis to determine required sample sizes and validate statistical significance of attack success rates.
 
-## Test and Deploy
+- **`statistical-engine.js`**:  
+  Aggregates experiment outputs and computes metrics: success rate, time-to-cache, CDN/browser comparisons.
 
-Use the built-in continuous integration in GitLab.
+> **Why?** Security papers require quantitative evidence. This supports reproducible, statistically sound evaluation.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+---
 
-***
+###  `db/` — Experiment Data Storage
 
-# Editing this README
+Defines how experimental data is stored and queried.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- **`schema.sql`**:  
+  PostgreSQL schema for trials, headers, outcomes, and metadata.
 
-## Suggestions for a good README
+- **`queries.js`**:  
+  Reusable query layer for analysis and reporting.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+> **Why?** Experiments generate structured data that must be queried consistently across runs.
 
-## Name
-Choose a self-explaining name for your project.
+---
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+###  `infrastructure/` — CDN & Deployment Simulation
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Simulates real-world infrastructure components.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- **`docker-compose.yml`**:  
+  Orchestrates origin server, PostgreSQL, pgAdmin, and Nginx CDN simulator.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+- **`nginx-cdn-simulator.conf`**:  
+  Simulates CDN caching logic (e.g., `.jpg`/`.css` caching, TTLs, Cache Deception Armor bypass logic).
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+> **Why?** Real CDNs are opaque. This provides **controlled, inspectable behavior** for experimentation.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+---
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### `monitoring/` — Instrumentation & Detection
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Observes system behavior during attacks.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- **`request-logger.js`**:  
+  Logs all requests, rewritten URLs, headers, user context, and cache indicators.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- **`anomaly-detector.js`**:  
+  Detects abnormal patterns (e.g., external domain contact, unexpected attack success, high request rates).
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+> **Why?** Ensures experiments are **observable, debuggable, and auditable**.
 
-## License
-For open source projects, say how it is licensed.
+---
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+###  `origin/` — Vulnerable Origin Server
+
+Express-based web app under test.
+
+- **`server.js`**:  
+  Serves sensitive endpoints: `/account`, `/api/user`, `/api/reflect`.
+
+- **`strategies.js`**:  
+  Defines header strategies: `proper`, `misconfigured`, `missing`, `conflicting`.
+
+- **`middleware/rate-limiter.js`**:  
+  Enforces strict rate limits (5 req/60s) to prevent abuse.
+
+- **`origin/sw/`**:  
+  Hosts SW payloads served by the origin (for registration via `/sw/*`).
+
+> **Why?** WCD feasibility depends on origin behavior. This enables **systematic variation**.
+
+---
+
+### `sw/` — Service Worker Attack Payloads
+
+Client-side SW implementations for different attack classes:
+
+- **`t1-path-sculpting.js`**: URL rewriting + Content-Type spoofing.
+- **`t2-header-manipulation.js`**: Header injection to trigger origin reflection.
+- **`t4-scope-misconfig.js`**: Path normalization to induce cache collisions.
+
+> **Note**: Duplicated relative to `origin/sw/` to reflect **different deployment contexts**.
+
+> **Why?** SWs are the **core research subject**—this isolates logic for clarity and reuse.
+
+---
+
+###  `scripts/` — Setup & Cleanup Utilities
+
+Ensures safe, repeatable experiments.
+
+- **`setup-mkcert.sh`**: Generates trusted local TLS certs (HTTPS required for SWs).
+- **`init-db.js`**: Initializes PostgreSQL schema.
+- **`cleanup-sw.js`**: Unregisters SWs, purges old data, validates safety.
+
+> **Why?** Prevents accidental state persistence and ensures **reproducibility**.
+
+---
+
+###  `tests/` — Automated Experiment Execution
+
+Playwright-based test suite for end-to-end validation.
+
+- **`attack.spec.js`**: Executes full attack matrix (victim → cache poison → attacker retrieval).
+- **`verify-sw.spec.js`**: Validates SW installation, scope, and interception.
+- **`utils.js`, `config.js`**: Shared helpers and test matrix config.
+- **`playwright.config.js`**: Browser automation (Chromium, Firefox, WebKit).
+
+> **Why?** Automated testing across CDNs, browsers, and strategies is essential for **scientific validity**.
+
+---
+
+### `logs/` and `test-results/`
+
+- **`logs/`**: Runtime logs from origin, CDN, and monitoring.
+- **`test-results/`**: Structured outputs (HTML/JSON reports, traces, videos).
+
+> **Why?** Separates **raw data** from **analysis logic**.
+
+---
+
+---
+### Root Files
+
+- ** `.env `** : Environment configuration
+
+- ** `package_json `**: Dependencies
+
+- ** ` Safety.md `**: Ethical constraints and cleanup guarantees
+
+---
+
+##  Essential Commands Cheat Sheet
+
+###  1. Initial Setup (Run Once)
+```bash
+git clone <repo-url> sw-wcd-research && cd sw-wcd-research
+
+# Install dependencies
+npm install
+cd origin && npm install && cd ..
+cd tests && npm install && cd ..
+```
+
+### 2. Configure Hosts File (Mandatory)
+**Windows (as Administrator):**  
+Edit `C:\Windows\System32\drivers\etc\hosts`  
+**macOS/Linux:**  
+Edit `/etc/hosts`
+
+Add:
+```
+127.0.0.1 cdn-simulator.local
+```
+
+Flush DNS:
+```bash
+# Windows
+ipconfig /flushdns
+# macOS/Linux
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+```
+
+
+### 4. HTTPS Certificate Setup
+> Required for Service Workers
+
+```bash
+# Install mkcert if not present
+brew install mkcert               # macOS
+sudo apt install libnss3-tools    # Ubuntu/Debian
+
+mkcert -install
+mkcert -key-file ssl/key.pem -cert-file ssl/cert.pem \
+  localhost 127.0.0.1 cdn-simulator.local
+```
+
+###  5. Start Infrastructure
+```bash
+npm run infra:up
+# Wait ~10 seconds for containers to initialize
+```
+
+###  6. Initialize Database
+```bash
+npm run db:init
+```
+
+###  7. Start Origin Server
+```bash
+# Terminal 1
+npm run dev
+# → https://localhost:3443
+```
+
+###  8. Run Local Tests
+```bash
+# Terminal 2
+npm run test:local
+# → Uses CDN simulator: https://cdn-simulator.local
+```
+
+###  9. Analyze Results
+```bash
+npm run analyze
+npx playwright show-report test-results/reports/html-report
+```
+
+###  10. Cleanup
+```bash
+npm run infra:down
+node scripts/cleanup-sw.js
+```
+> **Manual step**:  
+> Open DevTools → Application → Service Workers → **Unregister**
+
+###  11. Debugging
+```bash
+docker ps
+docker logs infrastructure-postgres-1
+docker logs infrastructure-nginx-1
+curl -k https://localhost:3443/health
+curl https://cdn-simulator.local/health
+```
+
+###  12. Common Issues
+
+| Issue | Fix |
+|------|-----|
+| `ERR_NAME_NOT_RESOLVED` | Add `cdn-simulator.local` to `/etc/hosts` |
+| `ERR_CONNECTION_REFUSED` | Ensure `npm run infra:up` succeeded |
+| `Module not found: pg` | Run `npm install pg` in root and `origin/` |
+| Playwright import errors | Use **static ES imports** only |
+| HTML report path conflict | Ensure `outputDir` in `playwright.config.js` points to `test-results/` |
+
+---
+
+## Minimal Working Command Flow
+
+```bash
+npm install
+npm run infra:up
+npm run db:init
+npm run dev              # Terminal 1
+npm run test:local       # Terminal 2
+```
+
+---
+
+##  Safety & Ethics
+
+This system includes **built-in safeguards**:
+
+- **Auto-unregister**: All Service Workers self-destruct after 5 minutes.
+- **Rate limiting**: Enforced at origin (5 req/60s).
+- **Data retention**: Auto-purge after 30 days.
+- **Domain allowlisting**: Blocks external requests.
