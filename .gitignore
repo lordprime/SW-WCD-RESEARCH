@@ -6,6 +6,9 @@ node_modules/
 .test-results/
 tests/test-results/
 
+ssl/
+.ssl/
+
 # Common Playwright artifacts (in case someone changes output dirs)
 playwright-report/
 blob-report/

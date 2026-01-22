@@ -17,6 +17,7 @@ export default defineConfig({
     ['line']
   ],
 
+  
   use: {
     baseURL: 'https://cdn-simulator.local',
     actionTimeout: 10000,
@@ -32,15 +33,31 @@ export default defineConfig({
   projects: [
     {
       name: 'local',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'https://cdn-simulator.local',
+        ignoreHTTPSErrors: true,
+        serviceWorkers: 'allow',
+
+        // Key change: make Chromium ignore TLS errors for SW script fetch
+        launchOptions: {
+          args: ['--ignore-certificate-errors'],
+        },
+      },
+    },
+    /*{
+      
+      name: 'local',
       use: { 
         ...devices['Desktop Chrome'],
-         baseURL: 'https://cdn-simulator.local', // Using HTTP instead of HTTPS, need to be modified 
+         baseURL: 'https://cdn-simulator.local',
         ignoreHTTPSErrors: true,
         // Adding context options for Service Workers
         contextOptions: {
           serviceWorkers: 'allow',
       },
-    }},
+    }},*/
+
     {
       name: 'cloudflare',
       use: { 
