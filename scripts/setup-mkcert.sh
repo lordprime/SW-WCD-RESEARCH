@@ -73,8 +73,9 @@ docker-compose -f infrastructure/docker-compose.yml up -d
 
 # Wait for database to be ready
 echo " Waiting for database to be ready..."
-until docker exec sw-wcd-v4-research-postgres-1 pg_isready -U swwcd -d swwcd_research; do
-    sleep 1
+until docker exec infrastructure-postgres-1 pg_isready -U swwcd -d swwcdresearch; do sleep 1; 
+#until docker exec sw-wcd-v4-research-postgres-1 pg_isready -U swwcd -d swwcd_research; do
+ #   sleep 1
 done
 
 # Initialize database schema
