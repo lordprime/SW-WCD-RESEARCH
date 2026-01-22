@@ -1,0 +1,34 @@
+# Node / dependencies
+node_modules/
+**/node_modules/
+
+# Playwright / test outputs (configured in playwright.config.js)
+.test-results/
+tests/test-results/
+
+# Common Playwright artifacts (in case someone changes output dirs)
+playwright-report/
+blob-report/
+test-results.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+#.env
+#.env.*
+#!.env.example
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Optional: DB/container local volumes (if present in repo folder)
+postgresdata/
