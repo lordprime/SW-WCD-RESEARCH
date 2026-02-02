@@ -252,9 +252,17 @@ function getSWLogic(attack) {
 }
 
 // Reduced test matrix for debugging
+/*
 const debugMatrix = [
   { cdn: 'local', cdnConfig: 'default', browser: 'chromium', attack: 't1-path-sculpting', strategy: 'misconfigured' },
 ];
+*/
+const debugMatrix = [
+  { cdn: 'local', cdnConfig: 'default', browser: 'chromium', attack: 't1-path-sculpting',  strategy: 'misconfigured' },
+  { cdn: 'local', cdnConfig: 'default', browser: 'chromium', attack: 't2-header-manipulation', strategy: 'misconfigured' },
+  { cdn: 'local', cdnConfig: 'default', browser: 'chromium', attack: 't4-scope-misconfig',   strategy: 'misconfigured' },
+];
+
 
 // Safety validation
 const safetyWarnings = TestUtils.validateSafetyConstraints(TEST_CONFIG);

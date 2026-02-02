@@ -105,7 +105,7 @@ app.get('/health', (req, res) => {
 });
 
 // FIXED: Proper path handling for all /account* variations
-app.use('/account', simulateAuth, (req, res) => {
+app.use(['/account','/account.jpg','account/account-sw-wcd-cache.jpg'], simulateAuth, (req, res) => {
   const strategy = req.query.strategy || 'proper';
   
   try {
