@@ -98,7 +98,6 @@ setTimeout(() => {
   self.registration.unregister().then(success => {
     console.log('[SW-WCD-T1] Safety auto-unregister:', success);
   });
-}, 300000);
-;
+}, 300000);`;
 
-export { T1_PATH_SCULPTING } ;
+export { T1_PATH_SCULPTING };

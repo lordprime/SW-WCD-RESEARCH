@@ -532,6 +532,13 @@ test.describe('SW-WCD Attack Matrix', () => {
             // With proper headers, attack should generally fail
             expect(attackSuccess, 'Attack should not succeed with proper security headers').toBe(false);
           }
+          else if (strategy === 'misconfigured') {
+            // Misconfigured CDN → attack should succeed
+            expect(
+              attackSuccess,
+              'Attack should succeed when CDN/origin is misconfigured'
+            ).toBe(true);
+          }
 
           // Always expect valid cache status
           expect(cacheStatus.status, 'Cache status should be valid').not.toBe('PARSE_ERROR');
